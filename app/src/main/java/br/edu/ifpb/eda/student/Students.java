@@ -1,9 +1,11 @@
 package br.edu.ifpb.eda.student;
 
 import br.edu.ifpb.eda.hashtable.HashTable;
+import br.edu.ifpb.eda.hashtable.SHashTable;
+import br.edu.ifpb.eda.hashtable.IHashTable;
 
 public class Students {
-    private final HashTable<Integer, Student> table = new HashTable<>();
+    private final IHashTable<Integer, Student> table = new SHashTable<>();
 
     public String getName(int registrationCode) {
         Student student = table.get(registrationCode);

@@ -1,20 +1,17 @@
 package br.edu.ifpb.eda.student;
 
-import br.edu.ifpb.eda.hashtable.HashTable;
-
 public class Alunos {
-    private final HashTable<Integer, Student> table = new HashTable<>();
+    private final Students students = new Students();
 
     public String pegarNome(int registrationCode) {
-        Student student = table.get(registrationCode);
-        return student == null ? "Aluno não existente." : table.get(registrationCode).getName();
+        return students.getName(registrationCode);
     }
 
     public void adicionarEstudante(int registrationCode, String name) {
-        table.add(registrationCode, new Student(name, registrationCode));
+        students.addStudent(registrationCode, name);
     }
 
     public Student removeEstudante(int registrationCode) {
-        return table.remove(registrationCode);
+        return students.removeStudent(registrationCode);
     }
 }

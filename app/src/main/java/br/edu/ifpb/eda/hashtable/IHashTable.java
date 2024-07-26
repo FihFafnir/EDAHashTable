@@ -1,6 +1,6 @@
 package br.edu.ifpb.eda.hashtable;
 
-interface IHashTable<K, V> {
+public interface IHashTable<K, V> {
     public int hash(K key);
 
     public void add(K key, V value);
